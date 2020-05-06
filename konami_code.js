@@ -28,5 +28,5 @@ function init() {
 		current = 0;
 		window.alert('You found it!');
   }
-  
+
 }
