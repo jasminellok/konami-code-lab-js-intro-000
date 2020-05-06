@@ -19,14 +19,15 @@ function init() {
   }
   let index = 0;
 
-  if (codes.indexOf(event.key) < 0 || event.key !== codes[index]) {
+  function onKeyDownHandler(e) {
+    if (codes.indexOf(event.key) < 0 || event.key !== codes[index]) {
 		index = 0;
 		return;
 	} else {
     index++
     if (pattern.length === current) {
 		current = 0;
-		window.alert('You found it!');
+		alert("Hurray!");
   }
 
 }
