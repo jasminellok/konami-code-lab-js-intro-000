@@ -14,10 +14,22 @@ const codes = [
 var index = 0;
 
 function init() {
-  document.body.addEventListener("keydown", (event) => {
-    const key = event.key 
-    console.log(key)
-  }
+  var index = 0
+  document.body.addEventListener('keydown', event);
 
+  function event(e) {
+    const key = parseInt(e.detail || e.which)
+    console.log('key', key)
+    if (key === code[index]) {
+      index++
+
+      if (index === code.length) {
+        alert("Hurray!")
+        index = 0
+      }
+    } else {
+      index = 0
+    }
+  }
 
 }
